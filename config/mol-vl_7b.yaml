@@ -1,0 +1,39 @@
+### model
+model_name_or_path: ckpts/qwen2-vl-7B
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: config/deepspeed/ds_z3_config.json
+
+### dataset
+dataset: Vis-CheBI20
+template: qwen2_vl
+cutoff_len: 1024
+max_samples: 131302
+overwrite_cache: true
+preprocessing_num_workers: 64
+
+### output
+output_dir: outputs/ocsu/mol-vl_7b
+logging_steps: 10
+save_steps: 1000
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 2 #8
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 50
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.01
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 1000

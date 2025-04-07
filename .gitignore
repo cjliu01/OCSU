@@ -1,0 +1,8 @@
+*.pyc
+*.egg-info/
+/ckpts/*
+!/ckpts/.placeholder
+/outputs/inference_logs/*
+!/outputs/inference_logs/.placeholder
+/data/Vis-CheBI20/*
+!/data/Vis-CheBI20/.placeholder

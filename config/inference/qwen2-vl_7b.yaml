@@ -1,0 +1,2 @@
+model_name_or_path: ckpts/qwen2-vl-7B
+template: qwen2_vl
