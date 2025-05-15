@@ -85,6 +85,23 @@ More information can be found at [Arxiv](https://arxiv.org/pdf/2501.15415). OCSU
 
     Checkout our [Jupytor notebooks](./scripts/demo.ipynb) for a quick start!
 
+## Quick Start
+* environment
+
+    ```bash
+    # The following lists some important package versions:
+    transformers==4.51.3
+    torch==2.2.1
+    torchvision==0.17.1
+    ```
+* usage
+
+    ```bash
+    cd ckpts
+    ln -s path/to/model mol-vl-7b
+    python infer.py --jsonl_path path/to/json --output path/to/result
+    ```
+
 ## Acknowledgment
 This repo benefits from [LLaMA_Factory](https://github.com/hiyouga/LLaMA-Factory) group. Thanks for their wonderful works.
 
